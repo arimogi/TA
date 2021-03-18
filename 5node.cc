@@ -25,9 +25,12 @@ NS_LOG_COMPONENT_DEFINE ("SecondScriptExample");
 int 
 main (int argc, char *argv[])
 {
+  
   bool verbose = true;
   uint32_t nCsma = 3;
   uint32_t nfire = 4;
+  
+  AnimationInterface anim("./scratch/animation_files/lima.xml");
 
   CommandLine cmd;
   cmd.AddValue ("nCsma", "Number of \"extra\" CSMA nodes/devices", nCsma);
@@ -108,7 +111,7 @@ main (int argc, char *argv[])
   csma.EnablePcap ("csma1", csmaDevices.Get (1), true);
   csma.EnablePcap ("csma2", csmaDevices.Get (3), true);
 
-  AnimationInterface anim("./scratch/lima.xml");
+  
 
   anim.SetConstantPosition(p2pNodes.Get(0),10.0,10.0);
   anim.SetConstantPosition(p2pNodes.Get(1),60.0,20.0);
