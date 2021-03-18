@@ -108,12 +108,13 @@ main (int argc, char *argv[])
   csma.EnablePcap ("csma1", csmaDevices.Get (1), true);
   csma.EnablePcap ("csma2", csmaDevices.Get (3), true);
 
-AnimationInterface anim("lima.xml");
-anim.SetConstantPosition(p2pNodes.Get(0),10.0,10.0);
-anim.SetConstantPosition(p2pNodes.Get(1),60.0,20.0);
-anim.SetConstantPosition(csmaNodes.Get(1),40.0,20.0);
-anim.SetConstantPosition(csmaNodes.Get(2),40.0,10.0);
-anim.SetConstantPosition(csmaNodes.Get(3),60.0,10.0);
+  AnimationInterface anim("./scratch/lima.xml");
+
+  anim.SetConstantPosition(p2pNodes.Get(0),10.0,10.0);
+  anim.SetConstantPosition(p2pNodes.Get(1),60.0,20.0);
+  anim.SetConstantPosition(csmaNodes.Get(1),40.0,20.0);
+  anim.SetConstantPosition(csmaNodes.Get(2),40.0,10.0);
+  anim.SetConstantPosition(csmaNodes.Get(3),60.0,10.0);
 
 //anim.SetConstantPosition(fireNodes.Get(5),50.0,50.0);
 //anim.SetConstantPosition(fireNodes.Get(6),70.0,50.0);
